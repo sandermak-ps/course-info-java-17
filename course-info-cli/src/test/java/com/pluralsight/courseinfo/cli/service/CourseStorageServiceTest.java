@@ -25,7 +25,7 @@ public class CourseStorageServiceTest {
 
     static class InMemoryCourseRepository implements CourseRepository {
 
-        private ArrayList<Course> courses = new ArrayList<>();
+        private List<Course> courses = new ArrayList<>();
 
         @Override
         public List<Course> getAllCourses() {
