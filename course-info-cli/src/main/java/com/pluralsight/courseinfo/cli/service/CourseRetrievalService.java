@@ -12,7 +12,8 @@ import java.net.http.HttpResponse;
 import java.util.List;
 
 public class CourseRetrievalService {
-
+    // Fallback in case Pluralsight API does not work (beware, this will only ever retrieve courses for sander-mak):
+    // private static final String PS_URI = "https://raw.githubusercontent.com/sandermak-ps/course-info-java-17/master/sander-mak.json";
     private static final String PS_URI = "https://app.pluralsight.com/profile/data/author/%s/all-content";
     private static final HttpClient client = HttpClient.newBuilder()
             .followRedirects(HttpClient.Redirect.ALWAYS)
